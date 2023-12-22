@@ -42,6 +42,11 @@ public partial class Form4 : System.Windows.Forms.Form
 
 	private void DisplayNumber()
 	{
+		// Not Thread Safe -> Error!
+		//numberLabel.Text =
+		//	Number.ToString(format: "#,##0");
+
+		// Thread Safe
 		if (numberLabel.InvokeRequired)
 		{
 			var callback =
@@ -64,6 +69,10 @@ public partial class Form4 : System.Windows.Forms.Form
 
 	private void EnableStartButton()
 	{
+		// Not Thread Safe -> Error!
+		//startButton.Enabled = true;
+
+		// Thread Safe
 		if (startButton.InvokeRequired)
 		{
 			var callback =

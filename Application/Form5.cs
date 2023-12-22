@@ -32,7 +32,7 @@ public partial class Form5 : System.Windows.Forms.Form
 		{
 			//DisplayNumber(number: Number);
 
-			//Infrastructure.Utility.SetControlPropertyThreadSafe
+			//Infrastructure.Utility.SetControlProperty
 			//	(control: numberLabel, propertyName: "Text", propertyValue: Number.ToString());
 
 			Infrastructure.Utility
@@ -45,7 +45,7 @@ public partial class Form5 : System.Windows.Forms.Form
 
 		//EnableStartButton();
 
-		//Infrastructure.Utility.SetControlPropertyThreadSafe
+		//Infrastructure.Utility.SetControlProperty
 		//	(control: startButton, propertyName: "Enabled", propertyValue: true);
 
 		Infrastructure.Utility
@@ -57,6 +57,10 @@ public partial class Form5 : System.Windows.Forms.Form
 	{
 		if (numberLabel.InvokeRequired)
 		{
+			// Error!
+			//var callback =
+			//	new SimpleCallback(DisplayNumber);
+
 			var callback =
 				new SimpleIntCallback(DisplayNumber);
 
