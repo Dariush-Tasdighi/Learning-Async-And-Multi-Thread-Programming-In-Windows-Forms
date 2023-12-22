@@ -9,6 +9,9 @@ public static class Utility : object
 	private delegate void SetControlPropertyDelegate
 		(System.Windows.Forms.Control control, string propertyName, object propertyValue);
 
+	/// <summary>
+	/// This function is Thread 
+	/// </summary>
 	public static void SetControlProperty
 		(System.Windows.Forms.Control control, string propertyName, object propertyValue)
 	{
